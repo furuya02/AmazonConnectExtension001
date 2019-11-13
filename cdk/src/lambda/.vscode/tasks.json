@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "deploy",
+            "type": "shell",
+            "command": ".vscode/deploy.sh",
+            "problemMatcher": []
+        }
+    ]
+}
