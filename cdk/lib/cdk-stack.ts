@@ -6,14 +6,15 @@ import * as iam from '@aws-cdk/aws-iam';
 // 識別するためのタグ
 const tag = "connect-ex-opetime";
 const settingFile = "OperationTime.txt";
-// 設定ファイルを保存するバケット名（変更の必要があります）
-const bucketName = tag + "-setting-bucket";
 // Lambdaのタイムゾーン
 const timeZone = 'Asia/Tokyo';
 
 export class AmazonConnectExtension001Stack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+    // 設定ファイルを保存するバケット名
+    const bucketName = tag + "-setting-bucket-" + this.account;
 
     //設定ファイル保存バケット
     const settingBucket = new s3.Bucket(this, tag + '-settingBucket', {
