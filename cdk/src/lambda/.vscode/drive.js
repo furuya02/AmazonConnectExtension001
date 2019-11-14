@@ -1,9 +1,5 @@
 var event = require(`./${process.argv[2]}`);
 
-
-event.context.System.device.deviceId = 'DEVICE_ID';
-
-
 function resolve(result) {
     console.log("-------------SUCCESS-------------")
     //console.log(JSON.stringify(result,undefined,4));
