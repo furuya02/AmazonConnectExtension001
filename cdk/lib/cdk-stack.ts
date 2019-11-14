@@ -46,9 +46,6 @@ export class AmazonConnectExtension001Stack extends cdk.Stack {
     new cdk.CfnOutput(this, "SettingBucket", {
       value: settingBucket.bucketName
     });
-    new cdk.CfnOutput(this, "LambdaFunction", {
-      value: opeTimeFunction.functionArn
-    });
   }
 }
 
