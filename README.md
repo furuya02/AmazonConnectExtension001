@@ -6,7 +6,7 @@
 % cd cdk
 % npm install
 % npm run build
-% cdk synth
+% npx cdk synth
 % npx cdk bootstrap --profile MyProfile <= 当該アカウント（リージョン）で初めて利用する場合
 % npx cdk deploy --profile MyProfile
 % cd ..
